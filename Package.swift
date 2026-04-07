@@ -14,21 +14,23 @@ let package = Package(
         .library(name: "DummySpeechEmbedded", targets: ["DummySpeechEmbedded"]),
     ],
     targets: [
-        // 3 binary targets pointing to 3 different XCFrameworks
+        // iOS + macOS + Mac Catalyst (MicrosoftCognitiveServicesSpeech-XCFramework-1.48.1.zip)
         .binaryTarget(
             name: "DummySpeechStandard",
-            url: "https://github.com/emilyjiji/dummy-speech-xcframeworks/releases/download/v1.0.0/DummySpeechStandard.xcframework.zip",
-            checksum: "5b984490e7b84ff92de9e11d09636b7a9ed607bcd3f727dbdce5d40c1f3fadf4"
+            url: "https://csspeechstorage.blob.core.windows.net/drop/1.48.1/MicrosoftCognitiveServicesSpeech-XCFramework-1.48.1.zip",
+            checksum: "ac702611b2cdf0192c30c929fb6235e51c54354135708632d9dd80622b5ae277"
         ),
+        // macOS-only (MicrosoftCognitiveServicesSpeech-MacOSXCFramework-1.48.1.zip)
         .binaryTarget(
             name: "DummySpeechMacOnly",
-            url: "https://github.com/emilyjiji/dummy-speech-xcframeworks/releases/download/v1.0.0/DummySpeechMacOnly.xcframework.zip",
-            checksum: "976fc1fee67483433abd8135bd67424fef1fab271d90a126457e6dcf1a6c4c5f"
+            url: "https://csspeechstorage.blob.core.windows.net/drop/1.48.1/MicrosoftCognitiveServicesSpeech-MacOSXCFramework-1.48.1.zip",
+            checksum: "99d15266d1a46516035dda845a93830c7f4e89182378629a9c0325f9e01c759c"
         ),
+        // Embedded speech (MicrosoftCognitiveServicesSpeech-EmbeddedXCFramework-1.48.1.zip)
         .binaryTarget(
             name: "DummySpeechEmbedded",
-            url: "https://github.com/emilyjiji/dummy-speech-xcframeworks/releases/download/v1.0.0/DummySpeechEmbedded.xcframework.zip",
-            checksum: "fa5cf15c5e030e0519535608389b0b26ec4c7a7260deb04957f596c2a4aa9659"
-        )
+            url: "https://csspeechstorage.blob.core.windows.net/drop/1.48.1/MicrosoftCognitiveServicesSpeech-EmbeddedXCFramework-1.48.1.zip",
+            checksum: "2aecf2e4505e9cb5962354fcbd1ae3669361bfa93d58b11a997683c56711df83"
+        ),
     ]
 )
